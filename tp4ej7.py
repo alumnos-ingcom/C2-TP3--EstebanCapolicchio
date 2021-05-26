@@ -23,15 +23,17 @@ def division_lenta(dividendo, divisor):
     if(divisor < 0):
         divisor = -divisor
         flag_B_negativo = 1
-    while (dividendo - divisor) > 0:
+
+    while (dividendo - divisor) >= 0:
         dividendo -= divisor
         cociente += 1
+        resto = dividendo
     #¿quien se lleva los signos?
     # si A (+) y B (+) --> C (+) y R (+) {ejemplo: 11 = 5 * 2 + 1}
     # si A (+) y B (-) --> C (-) y R (+) {ejemplo: 11 = -5 * -2 + 1}
     # si A (-) y B (+) --> C (-) y R (-) {ejemplo: -11 = 5 * -2 - 1}
     # si A (-) y B (-) --> C (+) y R (-) {ejemplo: -11 = -5 * 2 - 1}
-    resto = dividendo * -1**flag_A_negativo
-    cociente = cociente * -1**flag_A_negativo * -1**flag_B_negativo
+    resto = dividendo * (-1)**flag_A_negativo
+    cociente = cociente * (-1)**flag_A_negativo * (-1)**flag_B_negativo
     resultados = [cociente, resto]
     return resultados
