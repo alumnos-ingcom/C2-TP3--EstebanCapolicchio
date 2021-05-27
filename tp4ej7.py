@@ -3,6 +3,7 @@ def division_lenta(dividendo, divisor):
     '''
     realiza una division entre dos numeros enteros (tambien acepta numeros punto flotante) sean positivos o negativos
     devuelve una lista que contiene el Cociente y el Resto de la division
+    si se trata de dividir por 0 alza error ZeroDivisionError
     '''
     #nunca se puede dividir por 0...
     if(divisor == 0):
