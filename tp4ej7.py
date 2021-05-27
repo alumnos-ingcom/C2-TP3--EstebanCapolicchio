@@ -1,5 +1,9 @@
 #tp4ej7.py    
 def division_lenta(dividendo, divisor):
+    '''
+    realiza una division entre dos numeros enteros (tambien acepta numeros punto flotante) sean positivos o negativos
+    devuelve una lista que contiene el Cociente y el Resto de la division
+    '''
     #nunca se puede dividir por 0...
     if(divisor == 0):
         raise ZeroDivisionError
