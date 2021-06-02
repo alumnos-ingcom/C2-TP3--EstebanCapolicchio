@@ -1,3 +1,4 @@
+from tp4ej1 import ingrese_numero
 #tp4ej6.py
 def minimo(lista):
     '''
@@ -18,3 +19,21 @@ def maximo(lista):
         if(max_aux < lista[i]):
             max_aux = lista[i]
     return max_aux    
+
+
+def prueba():
+    lista = []
+    for i in range(0,5):#cota superior elegida de forma arbitraria
+        lista.append(ingrese_numero(f"ingrese el elemento {i+1} de la lista"))
+        
+    min = minimo(lista)
+    max = maximo(lista)
+    
+    print(lista)
+    print(f"el minimo de la lista es {min}")
+    print(f"el minimo de la lista es {max}")
+    
+    
+
+if __name__ == "__main__":
+    prueba()
