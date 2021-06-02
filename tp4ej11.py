@@ -11,3 +11,14 @@ def es_palindromo(texto):
         if(texto[i] != texto[longitud -1 - i]):
             return False
     return True
+
+
+def prueba():
+    texto = str(input("ingrese texto para analizar si es o no un palindromo"))
+    if(es_palindromo(texto)):
+        print(f"{texto} es un palindromo")
+    else:
+        print(f"{texto} NO es un palindromo")
+
+if __name__ == "__main__":
+    prueba()
