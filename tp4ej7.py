@@ -1,3 +1,4 @@
+from tp4ej1 import ingrese_numero
 #tp4ej7.py    
 def division_lenta(dividendo, divisor):
     '''
@@ -40,5 +41,19 @@ def division_lenta(dividendo, divisor):
     # si A (-) y B (-) --> C (+) y R (-) {ejemplo: -11 = -5 * 2 - 1}
     resto = dividendo * (-1)**flag_A_negativo
     cociente = cociente * (-1)**flag_A_negativo * (-1)**flag_B_negativo
-    resultados = [cociente, resto]
+    resultados = (cociente, resto)
     return resultados
+
+
+def prueba():
+    dividendo = ingrese_numero()
+    divisor = ingrese_numero()
+    resultados = division_lenta(dividendo, divisor)
+    print(f"[Cociente, Resto] = {resultados}")
+    
+
+if __name__ == "__main__":
+    prueba()
+
+
+
