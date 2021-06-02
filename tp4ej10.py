@@ -1,3 +1,4 @@
+from tp4ej1 import ingrese_numero
 from tp4ej9 import es_impar
 
 #tp4ej10.py
@@ -37,3 +38,17 @@ def factores_primos(numero):
     #vuelvo la lista un tuple y lo retorno
     tuple_de_factores=tuple(lista_auxiliar)
     return  tuple_de_factores
+
+
+
+def prueba():
+    numero = ingrese_numero()
+    resultados = factores_primos(numero)
+    print(resultados)
+    
+    
+
+if __name__ == "__main__":
+    prueba()
+
+
