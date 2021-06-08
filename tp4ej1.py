@@ -36,8 +36,9 @@ def ingrese_entero_reintento(mensaje, intentos=3):#por defecto son 3 intentos
             entero = ingrese_numero(mensaje)
             return entero
         except IngresoIncorrecto:
-            print("quedan "+str(i - 1)+" intentos")
             i -=1
+            print(f"quedan {i} intentos")
+            
     raise IngresoIncorrecto("el input no era un numero")
 
 def ingreso_entero_restringido(mensaje, valor_minimo=0, valor_maximo=10):
@@ -64,21 +65,25 @@ def ingreso_entero_restringido(mensaje, valor_minimo=0, valor_maximo=10):
 def prueba():
     mensaje="Ingrese un numero por favor"
     print("***************ingreso de numero entero*****************")
-    ingrese_numero(mensaje)
+    num1 = ingrese_numero(mensaje)
+    print(num1)
     print("********************************************************")
     print("*********ingreso de numero entero con intentos**********")
-        respuesta = str(input("quiere elegir usted cuantos intentos tiene? (Si | No) : "))
-        if(respuesta == Si || respuesta == si || respuesta==SI):
+        respuesta = input("quiere elegir usted cuantos intentos tiene? (Si | No) : ").lower()
+        if(respuesta == "si"):
             intentos=ingrese_numero(mensaje)
-            ingrese_entero_reintento(mensaje,intentos)
-        elif(respuesta == No || respuesta == no || respuesta==NO):
-            ingrese_entero_reintento(mensaje)#por defecto serán 3 intentos
+            num2a = ingrese_entero_reintento(mensaje,intentos)
+            print(num2a)
+        elif(respuesta == "no"):
+            num2b = ingrese_entero_reintento(mensaje)#por defecto serán 3 intentos
+            print(num2b)
         else:
             print("a ver... solo tenias que responder 'si' o 'no'...")
             print("por ende asumiré que no te importa... pasemos a la siguiente prueba")
     print("********************************************************")
     print("****ingreso de numero entero entre ciertos valores******")
-    ingreso_entero_restringido(mensaje)#por defecto será entre 0 y 10
+    num3 = ingreso_entero_restringido(mensaje)#por defecto será entre 0 y 10
+    print(num3)
     print("********************************************************")
 
 if __name__ == "__main__":
