@@ -49,7 +49,12 @@ def prueba():
     dividendo = ingrese_numero()
     divisor = ingrese_numero()
     resultados = division_lenta(dividendo, divisor)
-    print(f"[Cociente, Resto] = {resultados}")
+    
+    # ¿con esto se refiere a "desempaquetar" ?
+    cociente = resultados[0]
+    resto = resultados[1]
+    print(f"[Cociente, Resto] = [{cociente}, {resto}]")
+    
     
 
 if __name__ == "__main__":
