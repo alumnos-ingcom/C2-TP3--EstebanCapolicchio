@@ -19,7 +19,7 @@ def prueba():
     num1 = ingrese_numero("primer numero")
     num2 = ingrese_numero("segundo numero")
     rta = suma_lenta(num1, num2)
-    print("la suma entre"+str(num1)+" y "+str(num2)+" es igual a: "+str(rta))
+    print(f"la suma entre {num1} y {num2} es igual a: {rta}")
 
 if __name__ == "__main__":
     prueba()
