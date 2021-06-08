@@ -14,7 +14,7 @@ def es_palindromo(texto):
 
 
 def prueba():
-    texto = str(input("ingrese texto para analizar si es o no un palindromo"))
+    texto = input("ingrese texto para analizar si es o no un palindromo")
     if(es_palindromo(texto)):
         print(f"{texto} es un palindromo")
     else:
