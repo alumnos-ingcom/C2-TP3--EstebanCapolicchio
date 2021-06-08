@@ -27,19 +27,24 @@ def ordenar_menor_a_mayor(uno, dos, tres):
             lista_aux[i] = elem_aux
     return lista_aux 
 
-
+def entitular(numero1, mensaje):
+    borde = '*' * numero1 + ' '
+    print(borde + mensaje + borde)
 
 def prueba():
     num1 = ingrese_numero("ingrese el primer numero")
     num2 = ingrese_numero("ingrese el segundo numero")
     num3 = ingrese_numero("ingrese el tercer numero")
     
-    print("******* Ordenada de Menor a Mayor *******")
-    print(f"{ordenar_menor_a_mayor(num1,num2,num3)}")
-    print("*****************************************")
-    print("******* Ordenada de Mayor a Menor *******")
-    print(f"{ordenar_mayor_a_menor(num1,num2,num3)}")
-    print("*****************************************")
+    entitular(7, "Ordenada de Menor a Mayor")
+    orden_ascendente = ordenar_menor_a_mayor(num1,num2,num3)
+    print(f"{orden_ascendente}")
+    print('*' * 42) #el sentido de la vida, el universo y todo lo demas es 42
+    
+    entitular(7, "Ordenada de Mayor a Menor")
+    orden_descendente = ordenar_mayor_a_menor(num1,num2,num3)
+    print(f"{orden_descendente}")
+    print('*' * 42)
     
     
 if __name__ == "__main__":
